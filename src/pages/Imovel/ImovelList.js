@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {Col, Container, Row, Table} from 'react-bootstrap';
+import {Col, Container, Row} from 'react-bootstrap';
 
 function ImovelList() {
     const [imovel, setImovel] = useState([]);
@@ -23,26 +23,27 @@ function ImovelList() {
                     <h1>Listar Imóveis</ h1>
                 </ Col>
             </ Row>
-            <Table>
-                <thead>
-                <tr>
-                    <td>Cód</td>
-                    <td>Descricao</td>
-                    <td>Endereço</td>
-                    <td>Tipo</td>
-                </tr>
-                </thead>
-                <tbody>
+
+            <span style={{display: "grid", gridTemplateColumns: "repeat(4, 1fr)", fontWeight: 'bold'}}>
+                <ul>Cód</ul>
+                <ul>Descrição</ul>
+                <ul>Endereço</ul>
+                <ul>Tipo</ul>
+            </span>
+
+            <span>
                 {imovel.map((u)=>(
-                    <tr>
-                        <td>{u.id}</td>
-                        <td>{u.descricao}</td>
-                        <td>{u.endereco}</td>
-                        <td>{u.tipo}</td>
-                    </tr>
+                    <span>
+                        <hr></hr>
+                        <span style={{display: "grid", gridTemplateColumns: "repeat(4, 1fr)"}}>
+                            <ul>{u.id}</ul>
+                            <ul>{u.descricao}</ul>
+                            <ul>{u.endereco}</ul>
+                            <ul>{u.tipo}</ul>
+                        </span>
+                    </span>
                 ))}
-                </tbody>
-            </Table>
+            </span>
         </ Container>
     );
 }

@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {Col, Container, Row, Table} from 'react-bootstrap';
+import {Col, Container, Row} from 'react-bootstrap';
 
 function UsuarioList() {
     const [usuario, setUsuario] = useState([]);
@@ -23,24 +23,25 @@ function UsuarioList() {
                     <h1>Listar Usuarios</ h1>
                 </ Col>
             </ Row>
-            <Table>
-                <thead>
-                <tr>
-                    <td>Cód</td>
-                    <td>Nome</td>
-                    <td>E-mail</td>
-                </tr>
-                </thead>
-                <tbody>
+
+            <div style={{display: "grid", gridTemplateColumns: "repeat(3, 1fr)", fontWeight: 'bold'}}>
+                <div>Cód</div>
+                <div>Nome</div>
+                <div>E-mail</div>
+            </div>
+
+            <div>
                 {usuario.map((u)=>(
-                    <tr>
-                        <td>{u.id}</td>
-                        <td>{u.nome}</td>
-                        <td>{u.email}</td>
-                    </tr>
+                    <div>
+                        <hr></hr>
+                        <div style={{display: "grid", gridTemplateColumns: "repeat(3, 1fr)"}}>
+                            <div>{u.id}</div>
+                            <div>{u.nome}</div>
+                            <div>{u.email}</div>
+                        </div>
+                    </div>
                 ))}
-                </tbody>
-            </Table>
+            </div>
         </ Container>
     );
 }
