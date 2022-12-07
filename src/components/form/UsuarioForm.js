@@ -1,17 +1,17 @@
 import Input from '../../components/form/Input'
 import Submit from '../../components/form/Submit'
-import { useState } from 'react'
-import { Form } from 'react-bootstrap';
+import {useState} from 'react'
+import {Form} from 'react-bootstrap';
 
-function ClienteForm({ btnText, handleSubmit, clienteData }) {
-    const [cliente, setCliente] = useState(clienteData || [])
+function UsuarioForm({btnText, handleSubmit, usuarioData}) {
+    const [usuario, setUsuario] = useState(usuarioData || [])
 
     const submit = (e) => {
         e.preventDefault();
-        handleSubmit(cliente);
+        handleSubmit(usuario);
     }
     function handleChange(e) {
-        setCliente({ ...cliente, [e.target.name]: e.target.value })
+        setUsuario({ ...usuario, [e.target.name]: e.target.value })
     }
     return (
         <div>
@@ -20,25 +20,25 @@ function ClienteForm({ btnText, handleSubmit, clienteData }) {
                     name="id" text="Id:"
                     tipo="text" placeholder="Cód: do cliente"
                     handleChange={handleChange}
-                    value={cliente.id? cliente.id : ''}/>
+                    value={usuario.id? usuario.id : ''}/>
                 <Input
                     name="nome" text="Nome:"
                     tipo="text" placeholder="Nome do cliente"
                     handleChange={handleChange} 
-                    value={cliente.nome? cliente.nome : ''}/>
+                    value={usuario.nome? usuario.nome : ''}/>
                 <Input
-                    name="telefone" text="Telefone:"
-                    tipo="text" placeholder="Telefone do cliente"
+                    name="senha" text="Senha:"
+                    tipo="password" placeholder="Senha do cliente"
                     handleChange={handleChange}
-                    value={cliente.telefone ? cliente.telefone : ''}/>
+                    value={usuario.senha ? usuario.senha : ''}/>
                 <Input
                     name="email" text="Email:"
-                    tipo="email" placeholder="E-mail do cliente"
+                    tipo="email" placeholder="E-mail do usuario"
                     handleChange={handleChange} 
-                    value={cliente.email ? cliente.email : ''}/>
+                    value={usuario.email ? usuario.email : ''}/>
                 <Submit texto={btnText} />
             </Form>
         </div >
     );
 }
-export default ClienteForm;
+export default UsuarioForm;

@@ -1,12 +1,12 @@
 import {Col, Container, Row} from 'react-bootstrap';
-import ClienteForm from '../../components/form/ClienteForm'
 import {useNavigate} from 'react-router-dom'
+import ImovelForm from "../../components/form/ImovelForm";
 
-function ClienteCadastro() {
+function ImovelCadastro() {
     const navigate = useNavigate();
 
-    function createCliente(cliente) {
-        fetch('http://localhost:5000/cliente', {
+    function createImovel(cliente) {
+        fetch('http://localhost:5000/imovel', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ function ClienteCadastro() {
             body: JSON.stringify(cliente)
         }).then((resp) => resp.json())
             .then((data) => {
-                    navigate('/clienteList')
+                    navigate('/imovelList')
                     console.log(data)
                 }
             )
@@ -25,15 +25,15 @@ function ClienteCadastro() {
         <Container>
             <Row>
                 <Col>
-                    <h1>Cadastrar Cliente</h1>
+                    <h1>Cadastrar Usuario</h1>
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <ClienteForm handleSubmit={createCliente} btnText="Cadastrar" />
+                    <ImovelForm handleSubmit={createImovel} btnText="Cadastrar" />
                 </Col>
             </Row>
         </Container>
     )
 }
-export default ClienteCadastro;
+export default ImovelCadastro;

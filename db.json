@@ -11,6 +11,76 @@
       "nome": "teste",
       "telefone": "123",
       "email": "123"
+    },
+    {
+      "id": "3",
+      "nome": "teste 2",
+      "telefone": "tetete",
+      "email": "tetewwer"
+    },
+    {
+      "id": "5",
+      "nome": "teste",
+      "telefone": "teste",
+      "email": "teste"
+    },
+    {
+      "email": "teste@teste",
+      "id": "10",
+      "nome": "teste",
+      "telefone": "teste"
+    },
+    {
+      "id": "11",
+      "nome": "teste",
+      "telefone": "teste",
+      "email": "teste@teste.com"
+    }
+  ],
+  "usuario": [
+    {
+      "id": "1",
+      "nome": "Luiz",
+      "senha": "123",
+      "email": "gustavo.luizfb@gmail.com"
+    },
+    {
+      "id": "2",
+      "nome": "teste",
+      "senha": "123",
+      "email": "teste"
+    },
+    {
+      "id": "3",
+      "nome": "teste",
+      "senha": "teste",
+      "email": "teste"
+    },
+    {
+      "id": "4",
+      "nome": "teste",
+      "senha": "teste",
+      "email": "teste"
+    }
+  ],
+  "imovel": [
+    {
+      "id": "1",
+      "descricao": "Casa amarela",
+      "endereco": "Rua das flores",
+      "tipo": "Casa"
+    },
+    {
+      "endereco": "rua das flores",
+      "id": "3",
+      "descricao": "teste de casinha",
+      "tipo": "casa"
+    },
+    {
+      "id": "4",
+      "descricao": "teste",
+      "endereco": "teste",
+      "tipo": "teste"
     }
   ]
 }
