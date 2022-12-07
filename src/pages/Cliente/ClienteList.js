@@ -20,9 +20,10 @@ function ClienteList() {
         <Container>
             <Row>
                 <Col>
-                    <h1>Listar Clientes</ h1>
-                </ Col>
-            </ Row>
+                    <h1>Listar Clientes</h1>
+                </Col>
+            </Row>
+
             <Table>
                 <thead>
                 <tr>
@@ -43,7 +44,7 @@ function ClienteList() {
                 ))}
                 </tbody>
             </Table>
-        </ Container>
+        </Container>
     );
 }
 export default ClienteList;

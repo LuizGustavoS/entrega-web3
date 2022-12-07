@@ -21,8 +21,8 @@ function ImovelList() {
             <Row>
                 <Col>
                     <h1>Listar Imóveis</ h1>
-                </ Col>
-            </ Row>
+                </Col>
+            </Row>
 
             <span style={{display: "grid", gridTemplateColumns: "repeat(4, 1fr)", fontWeight: 'bold'}}>
                 <ul>Cód</ul>
@@ -44,7 +44,7 @@ function ImovelList() {
                     </span>
                 ))}
             </span>
-        </ Container>
+        </Container>
     );
 }
 export default ImovelList;

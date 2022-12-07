@@ -21,8 +21,8 @@ function UsuarioList() {
             <Row>
                 <Col>
                     <h1>Listar Usuarios</ h1>
-                </ Col>
-            </ Row>
+                </Col>
+            </Row>
 
             <div style={{display: "grid", gridTemplateColumns: "repeat(3, 1fr)", fontWeight: 'bold'}}>
                 <div>Cód</div>
@@ -42,7 +42,7 @@ function UsuarioList() {
                     </div>
                 ))}
             </div>
-        </ Container>
+        </Container>
     );
 }
 export default UsuarioList;
